@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/assets/img/logosonali2.png}">
+    <title>Preschool - Bootstrap Admin Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/customcss/style.css}">
+    <!--[if lt IE 9]>
+    <script th:src="@{/assets/js/html5shiv.min.js}"></script>
+    <script th:src="@{/assets/js/respond.min.js}"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="main-wrapper">
+    <div class="account-page">
+        <div class="container">
+            <h3 class="account-title text-white">Login</h3>
+            <div class="account-box">
+                <div class="account-wrapper">
+                    <div class="account-logo">
+                        <a href="index.html"><img src="assets/img/logosonali2.png" alt="SchoolAdmin"></a>
+                    </div>
+                    <form  th:action="@{/login}" th:object="${loginRequest}" method="post">
+                        <div class="form-group custom-mt-form-group">
+                            <input type="text" />
+                            <label class="control-label">Username or Email</label><i class="bar"></i>
+                        </div>
+                        <div class="form-group custom-mt-form-group">
+                            <input type="password"  />
+                            <label class="control-label">Password</label><i class="bar"></i>
+                        </div>
+                        <div class="form-group text-center custom-mt-form-group">
+                            <button class="btn btn-primary btn-block account-btn" type="submit">Login</button>
+                        </div>
+                        <div class="text-center">
+                            <a href="forgot-password.html">Forgot your password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sidebar-overlay" data-reff=""></div>
+<script type="text/javascript"  th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+<script type="text/javascript" th:src="@{/assets/js/app.js}"></script>
+
+<!-- SweetAlert2 -->
+
+<script th:src="@{/assets/js/sweetalert2.all.min.js}"></script>
+<script th:inline="javascript">
+    let successMsg = "Successfully login ";;
+    let errorMsg = "There was an error occurred due to internal surver error ";
+
+    if (successMsg !== null) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: successMsg
+        });
+    }
+    if (errorMsg !== null) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Login Failed',
+            text: errorMsg,
+            customClass: {
+                popup: 'swal-popup-height'
+            }
+        });
+
+    }
+</script>
+</body>
+
+</html>

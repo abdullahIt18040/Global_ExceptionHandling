@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/assets/img/favicon.png}">
+
+    <title>Preschool - Bootstrap Admin Template</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/customcss/style.css}">
+
+</head>
+
+<body>
+
+<div class="main-wrapper">
+    <div class="account-page">
+        <div class="container">
+            <h3 class="account-title text-white">Login</h3>
+            <div class="account-box">
+                <div class="account-wrapper">
+
+                    <div class="account-logo">
+                        <a href="#"><img th:src="@{/assets/img/logosonali2.png}" alt="SchoolAdmin"></a>
+                    </div>
+
+                    <form th:action="@{/login}" th:object="${loginRequest}" method="post">
+
+                        <div class="form-group custom-mt-form-group">
+                            <input type="email"
+                                   th:field="*{email}"
+                                   class="form-control"
+                                   placeholder="Enter Email"
+                                   autocomplete="off">
+                            <label class="control-label">Username or Email</label><i class="bar"></i>
+                        </div>
+
+                        <div class="form-group custom-mt-form-group">
+                            <input type="password"
+                                   th:field="*{password}"
+                                   class="form-control"
+                                   placeholder="Enter Password"
+                                   autocomplete="off">
+                            <label class="control-label">Password</label><i class="bar"></i>
+                        </div>
+
+                        <div class="form-group text-center custom-mt-form-group">
+                            <button class="btn btn-primary btn-block account-btn" type="submit">Login</button>
+                        </div>
+
+                        <div class="text-center">
+                            <a th:href="@{/forgot-password}">Forgot your password?</a>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sidebar-overlay" data-reff=""></div>
+
+
+<!-- JS -->
+<script th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
+<script th:src="@{/assets/js/popper.min.js}"></script>
+<script th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+<script th:src="@{/assets/js/app.js}"></script>
+
+<!-- SweetAlert2 -->
+
+<script th:src="@{/assets/js/sweetalert2.all.min.js}"></script>
+<script th:inline="javascript">
+    let errorMsg   = "An unexpected error occurred.";
+    let successMsg = "Operation completed successfully.";
+    let warningMsg = "Please review the information carefully.";
+    let infoMsg    = "Here is the information you requested.";
+
+    if (successMsg !== null) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: successMsg
+        });
+    }
+    if (errorMsg !== null) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: successMsg,
+            customClass: {
+                popup: 'swal-popup-height2'
+            }
+        });
+
+    }
+</script>
+
+
+</body>
+</html>

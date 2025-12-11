@@ -1,0 +1,142 @@
+/* Custom popup size */
+.swal-popup-height {
+    min-height: 50px !important;
+    width: 360px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px !important;
+}
+
+/* ================================
+   COMMON ICON BASE (all types)
+================================ */
+.swal-popup-height .swal2-icon {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 10px auto 0 auto !important;
+    padding: 0 !important;
+    border-width: 3px !important;
+}
+
+/* ================================
+       ERROR ICON (X)
+================================ */
+.swal-popup-height .swal2-icon.swal2-error {
+    position: relative;
+}
+
+.swal-popup-height .swal2-icon.swal2-error .swal2-x-mark-line-left,
+.swal-popup-height .swal2-icon.swal2-error .swal2-x-mark-line-right {
+    top: 50% !important;
+    left: 50% !important;
+    width: 3px !important;
+    height: 22px !important;
+    transform: translate(-50%, -50%) rotate(45deg) !important;
+}
+
+.swal-popup-height .swal2-icon.swal2-error .swal2-x-mark-line-right {
+    transform: translate(-50%, -50%) rotate(-45deg) !important;
+}
+
+/* Hide default oversized SVG if present */
+.swal-popup-height .swal2-icon.swal2-error svg {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+/* ================================
+
+
+     /* ================================
+            WARNING ICON (!)
+     ================================ */
+ .swal-popup-height .swal2-icon.swal2-warning {
+     border-color: #f8bb86 !important;
+ }
+
+.swal-popup-height .swal2-icon.swal2-warning .swal2-icon-content {
+    font-size: 22px !important; /* smaller ! mark */
+}
+
+/* ================================
+       INFO ICON (i)
+================================ */
+.swal-popup-height .swal2-icon.swal2-info {
+    border-color: #3fc3ee !important;
+}
+
+.swal-popup-height .swal2-icon.swal2-info .swal2-icon-content {
+    font-size: 22px !important;
+}
+
+/* ================================
+          TITLE + MESSAGE
+================================ */
+.swal-popup-height .swal2-title {
+    font-size: 18px !important;
+    margin-top: 0px !important;
+    margin-bottom: 3px !important;
+    text-align: center;
+}
+
+.swal-popup-height .swal2-html-container {
+    font-size: 15px !important;
+    text-align: center;
+    margin: 0 !important;
+}
+
+/* ================================
+           OK BUTTON
+================================ */
+.swal-popup-height .swal2-confirm {
+    margin-top: -5px !important;
+    padding: 5px 15px !important;
+    font-size: 13px !important;
+}
+/* ================================
+      for success
+================================ */
+/* Custom popup */
+.swal-popup-height2 {
+    /* Your existing styles for the popup container */
+    min-height: 50px !important;
+    width: 360px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px !important;
+}
+
+.swal-popup-height2 .swal2-success {
+    /* NEW: Styles to reduce the size of the circle and checkmark icon */
+    transform: scale(0.7);
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+/*================================
+TITLE + MESSAGE
+================================ */
+.swal-popup-height2 .swal2-title {
+    font-size: 18px !important;
+    margin-top: -17px !important;
+    margin-bottom: 3px !important;
+    text-align: center;
+}
+
+.swal-popup-height2 .swal2-html-container {
+    font-size: 15px !important;
+    text-align: center;
+    margin: 0 !important;
+}
+
+/* ================================
+           OK BUTTON
+================================ */
+.swal-popup-height2 .swal2-confirm {
+    margin-top: -5px !important;
+    padding: 5px 15px !important;
+    font-size: 13px !important;
+}
